@@ -1,0 +1,253 @@
+/* regole generali */
+*{
+   margin:0;
+   padding:0;
+   box-sizing: border-box;
+   font-family: 'Nunito', sans-serif;
+   font-weight: 700;
+}
+ul{
+   list-style-type: none;
+}
+/* regole generali */
+
+/* regole di debug */
+[class*="col-"]{
+   min-height: 80px;
+   background-color: lightgreen;
+   border: 1px solid black;
+}
+/* regole di debug */
+
+/* ADATTAMENTO IMG */
+img{
+   width: 100%;
+   height: auto;
+}
+
+
+
+/* COSTRUZIONE ELEMENTI FISSI BOTTOM LEFT TOP */
+/* bottom (PLAY) */
+.bot-play{
+   background-color: #282828;
+   width: 100%;
+   height: 80px;
+   position: fixed;
+   bottom: 0;
+   left: 0;
+   z-index: 3;
+}
+/* bottom (PLAY) */
+
+
+/* left (SPOTIFY) */
+/* container 1 */
+.left-spotify{
+   background-color: #000000;
+   width: 250px;
+   height: calc(100vh - 80px);
+   padding-top: 24px;
+   display: flex;
+   justify-content: space-between;
+   flex-direction: column;
+   z-index: 2;
+}
+
+#logo{
+   width: 131px;
+   height: 40px;
+   margin-bottom: 24px;
+   margin-left: 24px;
+}
+#home{
+   border-left: 5px solid #adff2f;
+}
+#home a{
+   color: #fafafa;
+   font-size: 14px;
+   font-weight: 700;
+}
+#home a > img{
+   color: red;
+}
+#cerca:hover{
+   border-left: 5px solid #adff2f;
+}
+#lib:hover{
+   border-left: 5px solid #adff2f;
+}
+.icons-left-spotify{
+   height: 40px;
+   width: 80%;
+   position: relative;
+   padding-left: 24px;
+}
+.icons-left-spotify a{
+   width: 100%;
+   text-decoration: none;
+   color: #b3b3b3;
+}
+.icons-left-spotify a:hover{
+   color: white;
+}
+
+.icons-left-spotify img{
+   width: 24px;
+   height: 24px;
+   margin: 5px;
+   color: red;
+}
+.icons-left-spotify > a > span{
+   position: absolute;
+   bottom: 11px;
+   left: 65px;
+}
+/* container 1 */
+
+
+/* container 2 */
+.second-container-left{
+   margin-top: 24px;
+   padding-left: 24px;
+}
+.second-container-left h3{
+   color: white;
+}
+.second-container-left a{
+   text-decoration: none;
+   color: #707070;
+   position: relative;
+}
+.second-container-left a:hover{
+   color: white;
+}
+#playlist > ul{
+   padding: 10px 0;
+   height: 35vh;
+   overflow-y: auto;
+   display: flex;
+   flex-direction: column;
+
+}
+#playlist > ul i{
+   font-size: 45px;
+   padding-right: 5px;
+}
+#playlist > ul > li:nth-child(1){
+   font-size: 18px;
+}
+#playlist > ul > li:nth-child(1) span{
+   width: 150px;
+   position: absolute;
+   bottom: 15px;
+   left: 50px;
+}
+
+#playlist > ul > li{
+
+}
+
+.dist-font{
+   padding: 8px 0;
+   font-size: 14px;
+}
+/* container 2 */
+
+
+/* container 3 */
+.third-container-left{
+   padding-left: 24px;
+   color: white;
+}
+.third-container-left h3{
+   display: inline-block;
+}
+.third-container-left a{
+   text-decoration: none;
+   color: #707070;
+   font-size: 14px;
+   cursor: pointer;
+}
+.third-container-left a:hover{
+   color: white;
+}
+#hr{
+   border-bottom: 1px solid #b3b3b3;
+   margin-top: 10px;
+   width: 90%;
+}
+.prova{
+
+}
+/* container 3 */
+/* left (SPOTIFY) */
+
+/* top (UPGRADE) */
+header {
+   position: fixed;
+   left: 0;
+   top: 0;
+   width: calc(100% - 250px);
+   margin-left: 250px;
+   background-color: rgba(0, 0, 0, 0.5);
+   height: 80px;
+}
+
+header a{
+   text-decoration: none;
+   color: white;
+   border: 1px solid white;
+   border-radius: 30px;
+   padding: 10px 25px;
+   font-size: 12px;
+   position: absolute;
+   top: 20px;
+   right: 10px;
+}
+header a:hover{
+   transform: scale(1.1);
+}
+/* top (UPGRADE) */
+/* COSTRUZIONE ELEMENTI FISSI BOTTOM LEFT TOP */
+
+
+
+/* COSTRUZIONE DEL MAIN (PARTE CENTRALE BRANI) */
+main{
+   width: 100%;
+   max-height: calc(100vh - 80px);
+   background-color: #141922;
+   display: flex;
+   color: pink;
+}
+/* COSTRUZIONE DEL MAIN (PARTE CENTRALE BRANI) */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* versione desktop lg */
+@media screen and (min-width: 993px) {
+}
+
+/* versione tablet md */
+@media screen and (min-width:769px) and (max-width:992px) {
+}
+
+/* versione mobile xs */
+@media screen and (max-width:768px){
+}
+
+/* versione mobile xxs */
+@media screen and (max-width:451px){
+}
