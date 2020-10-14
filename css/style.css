@@ -12,19 +12,10 @@ ul{
 html, body{
    overflow: hidden;
 }
-
 a{
    transition: all 0.25s;
 }
 /* regole generali */
-
-/* regole di debug */
-[class*="col-"]{
-   min-height: 80px;
-   background-color: lightgreen;
-   border: 1px solid black;
-}
-/* regole di debug */
 
 /* ADATTAMENTO IMG */
 img{
@@ -32,10 +23,9 @@ img{
    height: auto;
 }
 
-
-
 /* COSTRUZIONE ELEMENTI FISSI BOTTOM LEFT TOP */
 /* bottom (PLAY) */
+/* general */
 .bot-play{
    background-color: #282828;
    width: 100vw;
@@ -44,7 +34,212 @@ img{
    bottom: 0;
    left: 0;
    z-index: 3;
+   display: flex;
+   justify-content: space-between;
 }
+/* general */
+
+/* left */
+.left-cont-play{
+   width: 25%;
+   display: flex;
+   flex-flow: row nowrap;
+}
+.left-play{
+   width: 100%;
+   display: flex;
+   flex-flow: wrap;
+}
+.left-play > a > img{
+   width:45px;
+   height: 45px;
+   margin: 15px;
+}
+
+.titles{
+   margin-top: 24px;
+}
+
+.titles h5{
+   font-size: 12px;
+   color: white;
+   cursor: pointer;
+}
+.titles p{
+   font-size: 10px;
+   color: #575757;
+   cursor: pointer;
+}
+.cont1-icons{
+   margin-left: 30px;
+   margin-top: 30px;
+   font-size: 20px;
+}
+.cont1-icons a{
+   text-decoration: none;
+   color: #575757;
+}
+.cont1-icons i{
+   padding: 0 7px;
+   transition: all 0.25s;
+}
+.cont1-icons i:hover{
+   color: white;
+}
+
+/* 2 */
+.cont1-icons-2{
+   display: none;
+}
+.cont1-icons-2 a{
+   text-decoration: none;
+   color: #575757;
+}
+.cont1-icons-2 i{
+   padding: 0 7px;
+   transition: all 0.25s;
+}
+.cont1-icons-2 i:hover{
+   color: white;
+}
+/* 2 */
+
+/* left */
+
+/* center*/
+.central-cont-play{
+   width: 50vw;
+   margin: 0 20px;
+}
+
+/* top-center */
+.top-part{
+   text-align: center;
+}
+.top-part img{
+   width: 15px;
+   height: 15px;
+   margin: 0 5px;
+   margin-bottom: 7px;
+}
+.top-part img:hover{
+   cursor: pointer;
+}
+.top-part img:nth-child(3){
+   width: 30px;
+   height: 30px;
+   margin-top: 10px;
+   margin-bottom: 0;
+}
+.top-part img:nth-child(3):hover{
+   transform: scale(1.2);
+}
+.top-part img:nth-child(4){
+   transform: rotate(180deg);
+}
+/* top center */
+
+/* bottom center */
+.bottom-part{
+   text-align: center;
+   display: flex;
+   flex-flow: nowrap;
+   justify-content: space-between;
+}
+.bottom-part > span{
+   padding: 0 5px;
+   color: white;
+   font-size: 8px;
+   padding-top: 6.5px;
+}
+
+.barra{
+   display: inline-block;
+   width: 90%;
+   height: 3px;
+   background-color: #5a5a5a;
+   margin: 10px 5px;
+   border-radius: 20px;
+}
+.barra-nested{
+   width: 25%;
+   height: 3.15px;
+   background-color: #c1c1c1;
+   border-radius: 20px;
+   text-align: right;
+   position: relative;
+}
+
+.barra-nested i{
+   color: white;
+   font-size: 12px;
+   position: absolute;
+   bottom: -10px;
+   right: -103px;
+   padding: 5px 100px;
+}
+
+.barra-nested:hover{
+   background-color: #51ff00;
+   cursor: pointer;
+}
+/* bottom center */
+
+/* central */
+
+/* right */
+/* durata */
+.right-cont-play{
+   width: 25%;
+   display: flex;
+   flex-flow: nowrap;
+   text-align: right;
+}
+.right-cont-play img{
+   width: 15px;
+   height: 15px;
+   margin: 0 5px;
+}
+.right-cont-play a{
+   text-decoration: none;
+}
+.right-cont-play a img:hover{
+   transform: scale(1.2);
+}
+.contain-right{
+   width: 100%;
+   margin-top:35px;
+}
+.barra2{
+   display: inline-block;
+   width: 100px;
+   height: 3px;
+   background-color: #5a5a5a;
+   margin: 0px 5px;
+   margin-bottom: 5px;
+   border-radius: 20px;
+}
+.barra-nested2{
+   width: 25%;
+   height: 3.15px;
+   background-color: #c1c1c1;
+   border-radius: 20px;
+   text-align: right;
+   position: relative;
+}
+.barra-nested2 i{
+   color: white;
+   font-size: 12px;
+   position: absolute;
+   bottom: -5px;
+   right: -11px;
+}
+.barra-nested2:hover{
+   background-color: #51ff00;
+   cursor: pointer;
+}
+/* durata */
+/* right */
 /* bottom (PLAY) */
 
 
@@ -186,7 +381,6 @@ img{
    margin-top: 10px;
    width: 90%;
 }
-
 /* container 3 */
 /* left (SPOTIFY) */
 /* left (SPOTIFY) mobile */
@@ -232,7 +426,6 @@ header a:hover{
 /* COSTRUZIONE ELEMENTI FISSI BOTTOM LEFT TOP */
 
 
-
 /* COSTRUZIONE DEL MAIN (PARTE CENTRALE BRANI) */
 #sec-left{
    display: flex;
@@ -260,7 +453,6 @@ main a{
    text-align: center;
    position: relative;
 }
-
 
 .container-center-nav ul li a{
    padding-top: 5px;
@@ -537,7 +729,6 @@ main a{
    transform: translate(-50%, -62%);
 }
 /* play all'hover */
-
 /* aside brani (general) */
 
 /* top-b */
@@ -557,27 +748,13 @@ main a{
    justify-content: flex-start;
 }
 /* bottom-b */
-
-
 /* FINE BRANI */
-
-
 
 
 /* COSTRUZIONE DEL MAIN (PARTE CENTRALE BRANI) */
 
 
-
-
-
-
-
-
-
-
-
-
-
+/* MEDIA QUERIES */
 
 /* versione desktop lg */
 @media screen and (max-width: 993px) {
@@ -585,19 +762,58 @@ main a{
       justify-content: flex-start;
       flex-wrap: wrap;
    }
+   .cont1-icons{
+      margin-left: 0;
+      font-size: 11px;
+   }
+   .cont1-icons a i{
+      display: block;
+   }
 }
 
-/* versione tablet md */
-@media screen and (min-width:769px) and (max-width:992px) {
+@media screen and (max-width: 830px){
+   .contain-right{
+      width: 100%;
+      margin-top: 20px;
+   }
+}
+
+@media screen and (max-width: 681px){
+   .cont1-icons{
+      display: none;
+   }
+   .cont1-icons-2{
+      display: block;
+   }
+   .titles{
+      margin-top: 13px;
+      margin-left: 3px;
+   }
+   .cont1-icons-2 > a > i{
+      padding: 1px;
+   }
+}
+@media screen and (max-width: 615px){
+   .left-play > a{
+      display: none;
+   }
+
+   .titles h5{
+      font-size: 14px;
+   }
+   .titles p{
+      font-size: 11px;
+   }
+
+   .box-2 h2{
+      font-size: 17px;
+   }
+   .box-2 p{
+      font-size: 14px;
+   }
 
 
 }
-
-/* versione mobile xs */
-@media screen and (max-width:768px){
-
-}
-
 
 /* versione mobile xxs */
 @media screen and (max-width:650px){
@@ -609,6 +825,7 @@ main a{
       display: block;
       display: flex;
    }
+
 
    #lib:hover, #cerca:hover, #home, .icons-left-spotify{
       border: none;
@@ -639,8 +856,6 @@ main a{
    }
 }
 
-
-
 @media screen and (min-width: 427px) and (max-width: 592px){
    .top-b{
       justify-content: flex-start;
@@ -649,6 +864,7 @@ main a{
       margin-right: 50px;
    }
 }
+
 @media screen and (max-width: 513px){
    .container-row{
       flex-wrap: wrap;
@@ -661,5 +877,29 @@ main a{
    #total-container-brani > p{
       text-align: center;
       padding-right: 0;
+   }
+
+   .cont1-icons{
+      margin-top: 23px;
+   }
+   .cont1-icons i{
+      display: block;
+   }
+}
+
+@media screen and (max-width: 341px){
+   .titles{
+      margin-top: 5px;
+   }
+   .barra2{
+      margin-bottom: 15px;
+      margin-right: 10px;
+   }
+}
+
+@media screen and (max-width: 380px){
+   .top-part img{
+      margin-left: 0;
+      margin-right:0;
    }
 }
