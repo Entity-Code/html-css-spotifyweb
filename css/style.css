@@ -12,6 +12,10 @@ ul{
 html, body{
    overflow: hidden;
 }
+
+a{
+   transition: all 0.25s;
+}
 /* regole generali */
 
 /* regole di debug */
@@ -74,12 +78,11 @@ img{
 #home a > img{
    color: red;
 }
-#cerca:hover{
+#cerca:hover, #lib:hover{
    border-left: 5px solid #adff2f;
+   transition: all 0.35s;
 }
-#lib:hover{
-   border-left: 5px solid #adff2f;
-}
+
 .icons-left-spotify{
    height: 40px;
    width: 80%;
@@ -243,6 +246,218 @@ main{
    color: pink;
    overflow-y: auto;
 }
+main a{
+   text-decoration: none;
+}
+
+/* nav center-top */
+.container-center-nav ul{
+   text-align: center;
+}
+.container-center-nav ul li {
+   display: inline-block;
+   text-align: center;
+   position: relative;
+}
+
+
+.container-center-nav ul li a{
+   padding-top: 5px;
+   padding-left: 5px;
+   padding-right:5px;
+   color: #7d7f84;
+   display: inline-block;
+   font-size: 12px;
+}
+.container-center-nav ul li:nth-child(1) a{
+   color: white;
+}
+.container-center-nav ul li a:hover{
+   color: white;
+}
+
+/* EFFETTO SOTTOLINEAMENTO PARZIALE */
+.container-center-nav ul > li > a > #first:after {
+  content: '';
+  width: 35px;
+  height: 2px;
+  background: #adff2f;
+  border-radius: 50px;
+  position: absolute;
+  bottom: -1.5px;
+  left: 0px;
+  transform: translateX(70%);
+}
+
+.container-center-nav ul > li > a > #second:after {
+  content: '';
+  width: 30px;
+  height: 2px;
+  padding-top: 25px;
+  padding-left: 25px;
+  border-radius: 50px;
+  position: absolute;
+  bottom: -1.5px;
+  left: -22px;
+  transform: translateX(50%);
+}
+#second:hover {
+   content: '';
+   width: 30px;
+   height: 2px;
+   border-bottom: 2px solid #adff2f;
+   border-radius: 50px;
+   position: absolute;
+   bottom: -1.5px;
+   left: 4px;
+   transform: translateX(50%);
+   transition: all 0.35s;
+   z-index: 2;
+}
+
+.container-center-nav ul > li > a > #third:after {
+  content: '';
+  width: 30px;
+  height: 2px;
+  padding-top: 25px;
+  padding-left: 25px;
+  border-radius: 50px;
+  position: absolute;
+  bottom: -1.5px;
+  left: -22px;
+  transform: translateX(65%);
+}
+#third:hover {
+   content: '';
+   width: 40px;
+   height: 2px;
+   border-bottom: 2px solid #adff2f;
+   border-radius: 50px;
+   position: absolute;
+   bottom: -1.5px;
+   left: 5px;
+   transform: translateX(50%);
+   transition: all 0.35s;
+   z-index: 2;
+}
+
+.container-center-nav ul > li > a > #fourth:after {
+  content: '';
+  width: 45px;
+  height: 2px;
+  padding-top: 25px;
+  padding-left: 25px;
+  border-radius: 50px;
+  position: absolute;
+  bottom: -1.5px;
+  left: -22px;
+  transform: translateX(50%);
+}
+#fourth:hover {
+   content: '';
+   width: 45px;
+   height: 2px;
+   border-bottom: 2px solid #adff2f;
+   border-radius: 50px;
+   position: absolute;
+   bottom: -1.5px;
+   left: 8px;
+   transform: translateX(50%);
+   transition: all 0.35s;
+   z-index: 2;
+}
+
+.container-center-nav ul > li > a > #fifth:after {
+  content: '';
+  width: 40px;
+  padding-top: 25px;
+  padding-left: 25px;
+  border-radius: 50px;
+  position: absolute;
+  bottom: -1.5px;
+  left: -22px;
+  transform: translateX(60%);
+}
+#fifth:hover {
+   content: '';
+   width: 42px;
+   height: 2px;
+   border-bottom: 2px solid #adff2f;
+   border-radius: 50px;
+   position: absolute;
+   bottom: -1.5px;
+   left: 8.5px;
+   transform: translateX(50%);
+   transition: all 0.35s;
+   z-index: 2;
+}
+
+.container-center-nav ul > li > a > #sixth:after {
+  content: '';
+  width: 23px;
+  height: 2px;
+  padding-top: 25px;
+  padding-left: 25px;
+  border-radius: 50px;
+  position: absolute;
+  bottom: -1.5px;
+  left: -22px;
+  transform: translateX(75%);
+}
+#sixth:hover {
+   content: '';
+   width: 23px;
+   height: 2px;
+   padding-left: 15px;
+   border-bottom: 2px solid #adff2f;
+   border-radius: 50px;
+   position: absolute;
+   bottom: -1.5px;
+   left: 3.5px;
+   transform: translateX(50%);
+   transition: all 0.35s;
+   z-index: 2;
+}
+/* EFFETTO SOTTOLINEAMENTO PARZIALE */
+/* nav center-top */
+
+
+/* INIZIO BRANI */
+/* container totale aside brani */
+#total-container-brani{
+   /* debug */
+   min-height: 70%;
+   border: 1px solid white;
+   /* debug */
+   margin: 35px 20px;
+}
+/* container totale aside brani */
+
+/* aside brani (general) */
+.container-as{
+   /* debug */
+   min-height: 200px;
+   margin: 5px;
+   border: 1px solid yellow;
+   /* debug */
+}
+/* aside brani (general) */
+
+/* top-b */
+/* top-b */
+
+/* center-b */
+/* center-b */
+
+/* bottom-b */
+/* bottom-b */
+
+
+/* FINE BRANI */
+
+
+
+
 /* COSTRUZIONE DEL MAIN (PARTE CENTRALE BRANI) */
 
 
