@@ -697,6 +697,41 @@ main a{
 .container-row .box .play-cont:hover{
    opacity: 1;
 }
+<<<<<<< HEAD
+=======
+
+.container-row .box:nth-child(2) .play-cont{
+   position:absolute;
+   left:50%;
+   top: 50%;
+   transform: translate(-50%, -81.3%);
+}
+.top-b > .box:nth-child(2) .play-cont{
+   position:absolute;
+   left:50%;
+   top: 50%;
+   transform: translate(-50%, -80%);
+}
+.top-b > .box:nth-child(5) .play-cont{
+   position:absolute;
+   left:50%;
+   top: 50%;
+   transform: translate(-50%, -63%);
+}
+.center-b > .box:nth-child(2) .play-cont{
+   position:absolute;
+   left:50%;
+   top: 50%;
+   transform: translate(-50%, -62%);
+}
+.bottom-b > .box:nth-child(2) .play-cont{
+   position:absolute;
+   left:50%;
+   top: 50%;
+   transform: translate(-50%, -62%);
+}
+/* play all'hover */
+>>>>>>> 5b4884568529a781247649458cf74bece229f2a9
 
 .container-row .box:nth-child(2) .play-cont{
    position:absolute;
