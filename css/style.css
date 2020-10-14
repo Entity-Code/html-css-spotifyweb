@@ -9,6 +9,9 @@
 ul{
    list-style-type: none;
 }
+html, body{
+   overflow: hidden;
+}
 /* regole generali */
 
 /* regole di debug */
@@ -31,7 +34,7 @@ img{
 /* bottom (PLAY) */
 .bot-play{
    background-color: #282828;
-   width: 100%;
+   width: 100vw;
    height: 80px;
    position: fixed;
    bottom: 0;
@@ -45,11 +48,11 @@ img{
 /* container 1 */
 .left-spotify{
    background-color: #000000;
-   width: 250px;
+   min-width: 250px;
    height: calc(100vh - 80px);
    padding-top: 24px;
    display: flex;
-   justify-content: space-between;
+   justify-content: flex-start;
    flex-direction: column;
    z-index: 2;
 }
@@ -124,11 +127,10 @@ img{
 }
 #playlist > ul{
    padding: 10px 0;
-   height: 35vh;
+   max-height: 35vh;
    overflow-y: auto;
    display: flex;
    flex-direction: column;
-
 }
 #playlist > ul i{
    font-size: 45px;
@@ -143,9 +145,8 @@ img{
    bottom: 15px;
    left: 50px;
 }
-
 #playlist > ul > li{
-
+   flex-shrink: 2;
 }
 
 .dist-font{
@@ -157,8 +158,13 @@ img{
 
 /* container 3 */
 .third-container-left{
+   display: flex;
+   flex-direction: column;
+   justify-content: flex-end;
    padding-left: 24px;
+   height: 100%;
    color: white;
+   z-index: 1;
 }
 .third-container-left h3{
    display: inline-block;
@@ -177,19 +183,30 @@ img{
    margin-top: 10px;
    width: 90%;
 }
-.prova{
 
-}
 /* container 3 */
 /* left (SPOTIFY) */
+/* left (SPOTIFY) mobile */
+.left-spotify-xxs{
+   background-color: #000000;
+   width: 50px;
+   height: calc(100vh - 80px);
+   padding-top: 24px;
+   display: flex;
+   justify-content: space-between;
+   flex-direction: column;
+   z-index: 2;
+   display: none;
+}
+/* left (SPOTIFY) mobile */
+
 
 /* top (UPGRADE) */
 header {
    position: fixed;
    left: 0;
    top: 0;
-   width: calc(100% - 250px);
-   margin-left: 250px;
+   width: 100vw;
    background-color: rgba(0, 0, 0, 0.5);
    height: 80px;
 }
@@ -203,7 +220,7 @@ header a{
    font-size: 12px;
    position: absolute;
    top: 20px;
-   right: 10px;
+   right: 40px;
 }
 header a:hover{
    transform: scale(1.1);
@@ -214,12 +231,17 @@ header a:hover{
 
 
 /* COSTRUZIONE DEL MAIN (PARTE CENTRALE BRANI) */
-main{
-   width: 100%;
-   max-height: calc(100vh - 80px);
-   background-color: #141922;
+#sec-left{
    display: flex;
+}
+main{
+   width: 100vw;
+   height: calc(100vh - 80px);
+   background-color: #141922;
+   display: inline-block;
+   padding-top: 90px;
    color: pink;
+   overflow-y: auto;
 }
 /* COSTRUZIONE DEL MAIN (PARTE CENTRALE BRANI) */
 
@@ -249,5 +271,41 @@ main{
 }
 
 /* versione mobile xxs */
-@media screen and (max-width:451px){
+@media screen and (max-width:550px){
+   .left-spotify{
+      display: none;
+   }
+
+   .left-spotify-xxs{
+      display: block;
+      display: flex;
+   }
+
+   #lib:hover, #cerca:hover, #home, .icons-left-spotify{
+      border: none;
+      padding: none;
+      margin: none;
+   }
+   .icons-left-spotify img{
+      margin: 0;
+      padding: 0;
+   }
+   .icons-left-spotify{
+      padding: 0;
+      margin-right: 0;
+      padding-left: 10px;
+   }
+   .first-container-left{
+      display: flex;
+      flex-direction: column;
+   }
+   .third-container-left{
+      text-align: center;
+      padding-left: 10px;
+   }
+
+   #logo-small{
+      padding-bottom: 20px;
+      padding-left: 10px;
+   }
 }
