@@ -467,8 +467,6 @@ main a{
    margin-right: 15px;
 }
 
-.box-1{
-}
 .box-2{
    word-break: break-word;
 }
@@ -506,6 +504,37 @@ main a{
 }
 .container-row .box .play-cont:hover{
    opacity: 1;
+}
+
+.container-row .box:nth-child(2) .play-cont{
+   position:absolute;
+   left:50%;
+   top: 50%;
+   transform: translate(-50%, -81.3%);
+}
+.top-b > .box:nth-child(2) .play-cont{
+   position:absolute;
+   left:50%;
+   top: 50%;
+   transform: translate(-50%, -80%);
+}
+.top-b > .box:nth-child(5) .play-cont{
+   position:absolute;
+   left:50%;
+   top: 50%;
+   transform: translate(-50%, -63%);
+}
+.center-b > .box:nth-child(2) .play-cont{
+   position:absolute;
+   left:50%;
+   top: 50%;
+   transform: translate(-50%, -62%);
+}
+.bottom-b > .box:nth-child(2) .play-cont{
+   position:absolute;
+   left:50%;
+   top: 50%;
+   transform: translate(-50%, -62%);
 }
 /* play all'hover */
 
