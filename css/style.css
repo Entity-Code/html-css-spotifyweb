@@ -872,10 +872,12 @@ main a{
       margin: 0;
       padding: 0;
    }
+
    .icons-left-spotify{
       padding: 0;
       margin-right: 0;
       padding-left: 10px;
+      height: 40px;
    }
    .first-container-left{
       display: flex;
@@ -942,5 +944,15 @@ main a{
    .top-part img{
       margin-left: 0;
       margin-right:0;
+   }
+   #home{
+      margin-bottom: 5px;
+   }
+   .icons-left-spotify{
+      height: 20px;
+   }
+
+   #logo-small{
+      padding-bottom: 5px;
    }
 }
