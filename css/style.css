@@ -401,9 +401,9 @@ img{
 /* top (UPGRADE) */
 header {
    position: fixed;
-   left: 0;
+   right: 0;
    top: 0;
-   width: 100vw;
+   width: calc(100vw - 250px);
    background-color: rgba(0, 0, 0, 0.5);
    height: 80px;
 }
@@ -729,6 +729,38 @@ main a{
    transform: translate(-50%, -62%);
 }
 /* play all'hover */
+
+.container-row .box:nth-child(2) .play-cont{
+   position:absolute;
+   left:50%;
+   top: 50%;
+   transform: translate(-50%, -81.3%);
+}
+.top-b > .box:nth-child(2) .play-cont{
+   position:absolute;
+   left:50%;
+   top: 50%;
+   transform: translate(-50%, -80%);
+}
+.top-b > .box:nth-child(5) .play-cont{
+   position:absolute;
+   left:50%;
+   top: 50%;
+   transform: translate(-50%, -63%);
+}
+.center-b > .box:nth-child(2) .play-cont{
+   position:absolute;
+   left:50%;
+   top: 50%;
+   transform: translate(-50%, -62%);
+}
+.bottom-b > .box:nth-child(2) .play-cont{
+   position:absolute;
+   left:50%;
+   top: 50%;
+   transform: translate(-50%, -62%);
+}
+/* play all'hover */
 /* aside brani (general) */
 
 /* top-b */
@@ -826,6 +858,9 @@ main a{
       display: flex;
    }
 
+   header{
+      width: calc(100vw - 40px);
+   }
 
    #lib:hover, #cerca:hover, #home, .icons-left-spotify{
       border: none;
@@ -894,6 +929,11 @@ main a{
    .barra2{
       margin-bottom: 15px;
       margin-right: 10px;
+   }
+
+   header a{
+      padding: 7px 22px;
+      font-size: 10px;
    }
 }
 
