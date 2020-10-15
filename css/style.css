@@ -956,3 +956,20 @@ main a{
       padding-bottom: 5px;
    }
 }
+
+@media screen and (max-height: 300px){
+   header{
+      display: none;
+      transition: all 1s;
+   }
+   main{
+      padding-top: 5px;
+   }
+   .left-spotify{
+      padding-top: 0px;
+   }
+
+   #logo{
+      display: none;
+   }
+}
